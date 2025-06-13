@@ -178,7 +178,7 @@ def test_ring_mla_first_chunk(
     suffix_output = torch.empty_like(ref_suffix_output)
     suffix_lse = torch.empty_like(ref_suffix_lse)
 
-    torch_npu.atb.npu_ring_mla(
+    torch_npu._npu_ring_mla(
         q_nope=q_nope,
         q_rope=q_pe,
         k_nope=k_nope,
